@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./js/dashboard.js"></script>
+        <link rel='stylesheet' href='js/vendor/bp/bbpress.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/buddypress.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Love+Ya+Like+A+Sister|Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,300i,400,400i,600,700,700i,800|Raleway:100,200,300,400,500,600,700,800,900|Roboto:100,100i,300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/tocstyle.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/bps_buttonstyle.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/bps_manage_subs_page_style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/bps_whats_new_page_style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/cptstyle.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/public.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/fontello/css/fontello.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/shortcodes.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/core.animation.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/bbpress-style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/buddypress-style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/skin.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/custom-style.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' /> 
+    <link rel='stylesheet' href='css/custom.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/core.messages.css' type='text/css' media='all' />
+
+    </head>
+    <body>
+        <h1> Dashboard EuroSync </h1>
+        <div>
+            <ul id="test" class="item-list">
+            <% for( i = 0; i < Object.keys(allData).length; i++ ){ %>
+                <li id="userName" class="odd" onclick="myFunction()"> 
+                    <div class="item-avatar">
+                        <a href="">
+                            <img src="images/76-92x91.png" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="" />
+                        </a>
+                    
+                </div>
+                <div class="item">
+                    <div class="item-title">
+                        <a href="" >
+                            <%= Object.keys(allData)[i] %>
+                        </a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="activity"> <%= Object.keys(allData)[i] %></span>
+                    </div>
+                </div>
+                <div class="action">
+                </div>
+                <div class="clear"></div>
+                </li>
+                <% } %>
+            </ul>  
+        </div>
+    </body>
+</html>

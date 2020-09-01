@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Dashboard User</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-storage.js"></script>
+    <!-- Don't change the format for any other products. -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+    <!-- etc. -->
+    <script src="./js/getAllData.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCplQRlFAp_x8KZrdyxHjaY3fpYNZe5RqA&callback=initMap">
+    </script>
+    <link rel='stylesheet' href='js/vendor/bp/bbpress.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/buddypress.min.css' type='text/css' media='all' />
+    <link rel='stylesheet'
+        href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Love+Ya+Like+A+Sister|Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,300i,400,400i,600,700,700i,800|Raleway:100,200,300,400,500,600,700,800,900|Roboto:100,100i,300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext'
+        type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/tocstyle.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/bps_buttonstyle.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/bps_manage_subs_page_style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/bps_whats_new_page_style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/cptstyle.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/public.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/fontello/css/fontello.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/shortcodes.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/core.animation.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/bbpress-style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/bp/buddypress-style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/skin.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/custom-style.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/custom.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/core.messages.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="css/map.css">
+</head>
+
+<body>
+    <h1>User</h1>
+    <h2 id="latlong" class="something">
+        <%= userName %>
+        <% console.log("Username: " + userName) %>
+    </h2>>
+    <ul style="list-style-type:circle;" id="datas">
+        <li class="something" onclick="getAllDayDirections()">
+        
+        </li>
+    </ul>
+    <div>
+        <button id="button1" onclick="getAllDataFromDb()">Ver Localização Real</button>
+    </div>
+    <div id="map">
+
+
+    </div>
+
+    <ul id="list_name" class="list-group">
+        <h3> Estimativa Google: </h3>
+        <li class="list-group-item d-flex justify-content-between align-items-center" id="in_mile">Distancia em Milhas: </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center" id="in_kilo">Distancia em Kilometros: </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center" id="duration_text">Duração em Horas: </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center" id="duration_value">Duração em Minutos: </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center" id="from">Origem: </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center" id="to">Destino: </li>
+        <h3> Realidade: </h3>
+        <li class="list-group-item d-flex justify-content-between align-items-center" id="tempo">Duração da Viagem: </li>
+    </ul>
+    <button id="maisOpcoes" onclick="maisOpcoes()"> Mais Informações </button>
+    <script>
+
+    </script>
+</body>
+
+</html>
